@@ -46,10 +46,12 @@ const Login = () => {
   let token = sessionStorage.getItem("token");
 
   return (
-    <>
+    <div className="w-100 d-flex flex-column align-items-center justify-content-center ">
       {token && <Navigate replace to="/listado" />}
       <h2 className="pt-5 ps-5">Formulario de Login</h2>
-      <form onSubmit={submitHandler} className="w-100 my-5 px-5 fs-4 font-monospace" >
+      <br />
+      <h3>challenge@alkemy.org // react</h3>
+      <form onSubmit={submitHandler} className=" my-5 px-5 fs-4 font-monospace" >
         <label>
           <span>Correo Electrónico</span>
           <br />
@@ -62,9 +64,10 @@ const Login = () => {
           <input type="password" name="password" />
         </label>
         <br />
+        <br />
         <button type="submit">Ingresar</button>
       </form>
-    </>
+    </div>
   );
 };
 
